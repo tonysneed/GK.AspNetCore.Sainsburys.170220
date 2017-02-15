@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Index View</title>
+</head>
+<body>
+    <h3>Hello from Index.cshtml</h3>
+    <div>The time is @DateTime.Now</div>
+
+    @{
+        var firstName = ViewData["firstname"];
+        var name = $"{firstName} {ViewBag.lastname}";
+    }
+
+    @if (DateTime.Now.Hour < 12)
+    {
+        <div>Good morning @name!</div>
+    }
+    else
+    {
+        <div>Good afternoon @name!</div>
+    }
+</body>
+</html>

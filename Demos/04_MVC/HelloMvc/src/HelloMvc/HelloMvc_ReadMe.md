@@ -15,7 +15,7 @@
     - Try navigating to: http://localhost:5000/home/sayhello
         + Replace port number if using IIS Express
     - You should receive a 404 Not Found response
-    - After app.UseMvc, call UseMvcWithDefaultRoute
+    - Call app.UseMvcWithDefaultRoute
     - Restart the app and refresh the page
     - You should now see Hello World displayed
 

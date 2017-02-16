@@ -1,0 +1,19 @@
+﻿@model HelloTagHelpers.Models.HomeViewModel
+@inject Microsoft.AspNetCore.Hosting.IHostingEnvironment Host
+@addTagHelper "*, HelloTagHelpers"
+@addTagHelper "*, Microsoft.AspNetCore.Mvc.TagHelpers"
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello from MVC</title>
+</head>
+<body>
+    <h2>Hello @Model.Name from MVC!</h2>
+    Environment: @Host.EnvironmentName
+    <span emoji="smile"></span>
+    <emoji face="smile"></emoji>
+    <br />
+    <a asp-controller="Home" asp-action="SayGoodbye">Say Goodbye</a>
+</body>
+</html>

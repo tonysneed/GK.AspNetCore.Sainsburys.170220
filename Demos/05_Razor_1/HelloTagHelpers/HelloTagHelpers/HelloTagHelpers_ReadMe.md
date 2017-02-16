@@ -5,8 +5,19 @@
     - Add to "tools" section of project.json:
 
     ```
-    "Microsoft.AspNetCore.Razor.Tools": "1.0.0-preview2-final"
+    "Microsoft.AspNetCore.Razor.Tools": "1.1.0-preview4-final"
     ```
+
+    - Add dependency:
+
+    ```json
+    "Microsoft.AspNetCore.Razor.Tools": {
+      "version": "1.1.0-preview4-final",
+      "type": "build"
+    }
+    ```
+
+    - Run `dotnet restore`
 
 2. Add classes to TagHelpers folder
 

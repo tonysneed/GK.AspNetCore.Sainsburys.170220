@@ -1,0 +1,9 @@
+﻿@model RazorComponents.Models.HomeViewModel
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Hello from MVC";
+}
+<div>
+    <h2>Hello @Model.Name from MVC!</h2>
+    @await Component.InvokeAsync("Drinks", 4)
+</div>

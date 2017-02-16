@@ -1,0 +1,11 @@
+﻿@inject Microsoft.AspNetCore.Hosting.IHostingEnvironment Host
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+@RenderBody()
+@Html.Partial("footer", Host)
+</body>
+</html>

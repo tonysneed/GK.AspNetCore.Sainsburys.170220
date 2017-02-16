@@ -1,0 +1,11 @@
+﻿@using RazorComponents.Models
+@model List<Drink>
+
+<ol>
+    @foreach (var drink in Model)
+    {
+        <li>
+            @drink.Name @drink.Price.ToString("C")
+        </li>
+    }
+</ol>

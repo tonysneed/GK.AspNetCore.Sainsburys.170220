@@ -2,19 +2,30 @@
 
 ## Starter project for MVC Core web app
 
-1. Framework: .NET Core 1.1
+1. Add a global.json file to the solution
 
-2. SDK: 1.0.0-preview2-1-003177
+    - Links project to specific SDK version.
 
-    - Uses project.json tooling
+    ```json
+    {
+      "projects": [ ],
+      "sdk": {
+        "version": "1.0.0-preview2-1-003177"
+      }
+    }
+    ```
 
-3. Contains:
+2. Runtime: .NET Core 1.1
+
+3. Tooling: Project.json
+
+4. Contains:
 
     - Home ViewModel
     - Home Controller
     - Home Index View
 
-4. Startup Options:
+5. Startup Options:
 
     - Visual Studio: Kestrel
         + Select MvcBasic profile

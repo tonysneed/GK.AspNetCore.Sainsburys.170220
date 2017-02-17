@@ -8,7 +8,6 @@
 
     ```json
     {
-      "projects": [ ],
       "sdk": {
         "version": "1.0.0-preview2-1-003177"
       }

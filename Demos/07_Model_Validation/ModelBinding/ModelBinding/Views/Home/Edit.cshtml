@@ -1,0 +1,38 @@
+@model Person
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit Person</title>
+</head>
+<body>
+
+    <form asp-action="Edit">
+        <div asp-validation-summary="All"></div>
+        <h4>Edit Person</h4>
+        <hr />
+        <table>
+            <tr>
+                <td><label asp-for="Name"></label></td>
+                <td><input asp-for="Name" /></td>
+                <td><span asp-validation-for="Name"></span></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Age"></label></td>
+                <td><input asp-for="Age" /></td>
+                <td><span asp-validation-for="Age"></span></td>
+            </tr>
+        </table>
+        <input type="submit" value="Save" />
+    </form>
+
+    <a asp-action="Index">Back to List</a>
+
+    <script src="~/scripts/jquery/jquery.min.js"></script>
+    <script src="~/scripts/jquery-validation/jquery.validate.min.js"></script>
+    <script src="~/scripts/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+</body>
+</html>

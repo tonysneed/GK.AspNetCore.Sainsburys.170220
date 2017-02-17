@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Person>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Persons List</title>
+</head>
+<body>
+    <h2>Hello Model Binding!</h2>
+    <hr/>
+    <table>
+        @foreach (var person in Model)
+        {
+            <tr>
+                <td>Id @person.Id: </td>
+                <td>@person.Name</td>
+                <td>Age @person.Age</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@person.Id">Edit</a>
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

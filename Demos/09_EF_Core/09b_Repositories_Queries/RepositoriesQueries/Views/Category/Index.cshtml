@@ -1,0 +1,22 @@
+﻿@using RepositoriesQueries.Models
+@model IEnumerable<Category>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Categories</title>
+</head>
+<body>
+    <h2>Categories</h2>
+    <hr />
+    <table>
+        @foreach (var category in Model)
+        {
+            <tr>
+                <td>@category.CategoryId: </td>
+                <td>@category.CategoryName</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

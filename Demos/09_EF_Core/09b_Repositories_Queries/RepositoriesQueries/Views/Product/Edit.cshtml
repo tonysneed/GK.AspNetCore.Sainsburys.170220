@@ -1,0 +1,30 @@
+﻿@model EditProductViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Product</title>
+</head>
+<body>
+    <form asp-controller="Product" asp-action="Edit" method="post">
+        <h4>Edit Product</h4>
+        <hr />
+        <fieldset>
+            <label asp-for="Product.ProductId"></label>
+            <input asp-for="Product.ProductId" readonly="readonly" />
+            <label asp-for="Product.ProductName"></label>
+            <input asp-for="Product.ProductName" />
+            <label asp-for="Product.UnitPrice"></label>
+            <input asp-for="Product.UnitPrice" />
+            <select type="text" asp-for="@Model.Product.CategoryId"
+                    asp-items="@Model.Categories">
+                <option value="">--select--</option>
+            </select>
+        </fieldset>
+        <input type="submit" value="Save" />
+    </form>
+
+    <a asp-action="Index">Back to Products</a>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Product>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Products</title>
+</head>
+<body>
+    <h2>Products</h2>
+    <hr />
+    <table>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.ProductId: </td>
+                <td>@product.ProductName </td>
+                <td>@product.UnitPrice</td>
+                <td>@product.Category.CategoryName</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@product.ProductId">Edit</a>
+                </td>
+            </tr>
+        }
+    </table>
+</body>
+</html>

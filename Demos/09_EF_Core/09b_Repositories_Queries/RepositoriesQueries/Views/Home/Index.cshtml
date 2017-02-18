@@ -1,0 +1,16 @@
+﻿@model HomeViewModel
+@inject Microsoft.AspNetCore.Hosting.IHostingEnvironment Host
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EF Core</title>
+</head>
+<body>
+    <h2>Hello @Model.Name from EF Core!</h2>
+    <hr/>
+    <a asp-controller="Category" asp-action="Index">Categories</a>
+    <a asp-controller="Product" asp-action="Index">Products</a>
+    <p>Environment: @Host.EnvironmentName</p>
+</body>
+</html>

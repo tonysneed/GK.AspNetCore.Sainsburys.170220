@@ -27,3 +27,4 @@ The **Demos** folder contains all of the demos conducted during class.
 
 5. **SQL Server Management Studio**: <https://msdn.microsoft.com/en-us/library/mt238290.aspx>
 
+6. **Fiddler HTTP Debugging Tool**: <http://www.telerik.com/fiddler>

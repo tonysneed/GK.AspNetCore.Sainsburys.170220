@@ -1,5 +1,7 @@
 # Demos for GK Course on ASP.NET Core v1
 
+### NOTE: Demos use project.json tooling with Visual Studio 2015.
+
 The **Notes** folder contains relevant information, including links to articles, 
 suggested reading, and handy tools.
 

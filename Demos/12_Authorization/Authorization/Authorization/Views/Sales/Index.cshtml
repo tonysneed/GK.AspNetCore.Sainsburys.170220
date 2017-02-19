@@ -1,0 +1,9 @@
+﻿@model SalesData
+@{
+    ViewBag.Title = "Sales";
+}
+
+<h2>Sales Report</h2>
+<h4>Region: <strong>@Model.Region</strong></h4>
+<h4>Total Sales: @Model.SalesTotal.ToString("C")</h4>
+<p><a asp-controller="Home" asp-action="Index">Home</a></p>

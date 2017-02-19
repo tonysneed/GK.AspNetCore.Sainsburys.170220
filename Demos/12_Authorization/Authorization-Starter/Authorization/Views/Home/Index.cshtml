@@ -1,0 +1,10 @@
+﻿@model HomeViewModel
+@inject Microsoft.AspNetCore.Hosting.IHostingEnvironment Host
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Hello @Model.Name from MVC!</h2>
+<a asp-controller="Account" asp-action="Logout">Logout</a>
+<hr/>
+Environment: @Host.EnvironmentName

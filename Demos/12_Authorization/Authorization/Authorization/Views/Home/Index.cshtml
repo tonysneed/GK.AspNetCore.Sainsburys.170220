@@ -1,0 +1,27 @@
+﻿@model HomeViewModel
+@inject Microsoft.AspNetCore.Hosting.IHostingEnvironment Host
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Hello Authorization from MVC!</h2>
+<p>User Name: <strong>@Model.Name</strong></p>
+<p>Role: <strong>@Model.Role</strong></p>
+<p>Region: <strong>@Model.Region</strong></p>
+<p>Security Clearance: <strong>@Model.SecurityClearance</strong></p>
+<p>
+    @if (Model.CanViewSales)
+    {
+        <div>
+            <hr />
+            View Sales:
+            @foreach (var region in Model.ViewableRegions)
+            {
+                <a asp-controller="Sales" asp-action="Index" asp-route-region="@region">@region</a>
+            }
+        </div>
+    }
+</p>
+<hr />
+<p><a asp-controller="Account" asp-action="Logout">Logout</a></p>
+Environment: <strong>@Host.EnvironmentName</strong>

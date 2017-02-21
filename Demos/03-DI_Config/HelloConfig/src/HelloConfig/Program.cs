@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Collections.Generic;
+using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 
@@ -13,6 +14,11 @@ namespace HelloConfig
             // Plug command-line args into config
             var config = new ConfigurationBuilder()
                 .AddCommandLine(args)
+                .AddInMemoryCollection(new Dictionary<string, string>
+                {
+                    { "environment", "Development" }
+                })
+                .AddEnvironmentVariables(prefix: "ASPNETCORE_")
                 .Build();
 
             var host = new WebHostBuilder()

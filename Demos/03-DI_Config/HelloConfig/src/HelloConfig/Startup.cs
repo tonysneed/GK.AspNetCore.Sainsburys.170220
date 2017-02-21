@@ -19,6 +19,7 @@ namespace HelloConfig
                 // Last addition wins
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddUserSecrets()
+                .AddEnvironmentVariables()
                 .Build();
         }
 
@@ -49,14 +50,15 @@ namespace HelloConfig
             //int year = int.Parse(Configuration.GetSection("copyright:year").Value);
             //string company = Configuration.GetSection("copyright:company").Value;
 
-            var year = copyrightOpts.Value.Year;
-            var company = copyrightOpts.Value.Company;
+            var secret = Configuration.GetSection("MySecret").Value;
+            var copyrightText = $"Copyright {copyrightOpts.Value.Year} {copyrightOpts.Value.Company}";
 
-            var copyrightText = $"Copyright {year} {company}";
+            var message = $"Hello ASP.NET Core!" +
+                $"\n\nSecret: {secret}\nEnvironment: {env.EnvironmentName}\n{copyrightText}";
 
             app.Run(async context =>
             {
-                await context.Response.WriteAsync($"Hello Config! {copyrightText} ({env.EnvironmentName})");
+                await context.Response.WriteAsync(message);
             });
         }
     }

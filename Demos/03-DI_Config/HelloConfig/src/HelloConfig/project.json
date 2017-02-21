@@ -11,7 +11,7 @@
     "Microsoft.Extensions.Logging.Console": "1.1.0",
     "Microsoft.Extensions.Configuration.CommandLine": "1.1.0",
     "Microsoft.Extensions.Configuration.Json": "1.1.0",
-    "Microsoft.Extensions.Configuration.UserSecrets": "1.0.0"
+    "Microsoft.Extensions.Configuration.UserSecrets": "1.1.0"
   },
 
   "tools": {
@@ -21,8 +21,11 @@
 
   "userSecretsId": "HelloConfig",
 
+  // Obviously, do not check secrets into source code control ...
+
   // dotnet user-secrets set Copyright:Year "2018"
   // dotnet user-secrets set Copyright:Company "LucasFilm"
+  // dotnet user-secrets set MySecret "DevSecret"
 
   "frameworks": {
     "netcoreapp1.1": {

@@ -204,7 +204,7 @@
 
     - GET Request: http://localhost:5000/api/products/3
       + GET Response:
-      + Status Code: 201
+      + Status Code: 200
       + Body:
 
     ```json

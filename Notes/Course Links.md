@@ -49,9 +49,6 @@
 **Dependency Injection in ASP.NET Core**:
 - <https://blogs.msdn.microsoft.com/webdev/2016/03/28/dependency-injection-in-asp-net-core/>
 
-**Async with EF 6 and Web API**:
-- <http://blog.tonysneed.com/2013/03/22/async-services-asp-net-web-api-entity-framework-6/>
-
 **Fluent Validation with ASP.NET Core**:
 - <http://mikelindegarde.com/post/2017/01/14/validating-api-input-in-asp-net-core-1-1-with-fluentvalidation>
 

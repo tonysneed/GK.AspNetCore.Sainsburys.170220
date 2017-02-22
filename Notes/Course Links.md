@@ -54,3 +54,6 @@
 
 **Tony's Blog Post on Async with Web API**:
 - <https://blog.tonysneed.com/2013/03/22/async-services-asp-net-web-api-entity-framework-6/>
+
+**Use NLog for logging exceptions**:
+- <http://dotnetthoughts.net/using-nlog-in-aspnet-core/>

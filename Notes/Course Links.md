@@ -11,6 +11,9 @@
 **ASP.NET Core Template Pack**:
 - <https://marketplace.visualstudio.com/items?itemName=MadsKristensen.ASPNETCoreTemplatePack>
 
+** Steve Sanderson's Blog Post on SPA Template:
+- <http://blog.stevensanderson.com/2016/05/02/angular2-react-knockout-apps-on-aspnet-core/>
+
 **Open Command Line**:
 - <https://marketplace.visualstudio.com/items?itemName=MadsKristensen.OpenCommandLine>
 

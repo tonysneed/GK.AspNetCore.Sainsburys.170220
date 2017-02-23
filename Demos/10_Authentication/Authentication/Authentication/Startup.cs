@@ -23,7 +23,6 @@ namespace Authentication
             {
                 // Add global auth filter
                 options.Filters.Add(new AuthorizeFilter(policy));
-                options.Filters.Add(typeof(ValidateAntiForgeryTokenAttribute));
             });
         }
 

@@ -313,11 +313,13 @@
 
     - Log in to see the user name shown on the home page
 
-9. Add a global filter which defends against cross-site token forgery
-    - Add a filter as an option in `services.AddMvc` in `Startup.ConfigureServices`
+9. Add a defense against cross-site token forgery
+    - Add a `ValidateAntiForgeryToken` attribute to the Account.Login method
 
     ```charp
-    options.Filters.Add(typeof(ValidateAntiForgeryTokenAttribute));
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Login(LoginViewModel model)
     ```
 
     - With your browser's F12 tools find the `<input name="__RequestVerificationToken">` 

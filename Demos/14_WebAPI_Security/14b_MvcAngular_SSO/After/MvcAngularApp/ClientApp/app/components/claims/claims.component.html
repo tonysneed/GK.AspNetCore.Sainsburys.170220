@@ -1,0 +1,20 @@
+<h1>Claims for {{username}}</h1>
+
+<p>This component demonstrates retrieving user claims.</p>
+
+<p *ngIf="!claims"><em>Loading...</em></p>
+
+<table class='table' *ngIf="claims">
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let claim of claims">
+            <td>{{ claim.type }}</td>
+            <td>{{ claim.value }}</td>
+        </tr>
+    </tbody>
+</table>

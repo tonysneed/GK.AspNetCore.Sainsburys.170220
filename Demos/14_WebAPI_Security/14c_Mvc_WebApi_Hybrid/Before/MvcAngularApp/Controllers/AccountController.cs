@@ -28,6 +28,15 @@ namespace MvcAngularApp.Controllers
             return Json(claims);
         }
 
+        // GET: /account/accesstoken
+        // TODO: Retreive access token from the authorization cookie
+        // [HttpGet("account/[action]")]
+        // public async Task<IActionResult> AccessToken()
+        // {
+        //     var token = await HttpContext.Authentication.GetTokenAsync("access_token");
+        //     return Json(token);
+        // }
+
         // GET: /account/logout
         [Route("account/[action]")]
         public async Task<IActionResult> Logout()

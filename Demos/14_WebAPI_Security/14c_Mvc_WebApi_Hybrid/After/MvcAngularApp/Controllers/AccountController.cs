@@ -1,6 +1,7 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 
 namespace MvcAngularApp.Controllers
@@ -26,6 +27,15 @@ namespace MvcAngularApp.Controllers
         {
             var claims = from c in User.Claims select new { c.Type, c.Value };
             return Json(claims);
+        }
+
+        // GET: /account/accesstoken
+        [HttpGet("account/[action]")]
+        public async Task<IActionResult> AccessToken()
+        {
+            // Retreive access token from the authorization cookie
+            var token = await HttpContext.Authentication.GetTokenAsync("access_token");
+            return Json(token);
         }
 
         // GET: /account/logout

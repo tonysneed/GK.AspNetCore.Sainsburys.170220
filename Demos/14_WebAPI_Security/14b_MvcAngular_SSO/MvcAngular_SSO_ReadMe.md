@@ -175,8 +175,8 @@ in the [IdentityServer4](http://identityserver.io/) [documentation](http://docs.
     - Add an `[Authorize]` attribute to the Account controller
 
     ```csharp
-     // GET: /username
-    [HttpGet("/[action]")]
+     // GET: /account/username
+    [HttpGet("account/[action]")]
     public IActionResult Username()
     {
         string username = "";
@@ -207,11 +207,10 @@ in the [IdentityServer4](http://identityserver.io/) [documentation](http://docs.
 
         // Call username action to display the logged in user's name
         public loggedInAs: string
-        public claimsUrl: string = '/claims';
-        public logoutUrl: string = '/logout';
+        public logoutUrl: string = '/account/logout';
 
         constructor(http: Http) {
-            http.get('/username').subscribe(result => {
+            http.get('/account/username').subscribe(result => {
                 let username = result.json();
                 if(username.length > 0)
                 this.loggedInAs = `Logged in as ${username}`;
@@ -232,8 +231,8 @@ in the [IdentityServer4](http://identityserver.io/) [documentation](http://docs.
 
     ```html
     <!-- Show user claims -->
-    <li>
-        <a href="{{claimsUrl}}">
+    <li [routerLinkActive]="['link-active']">
+        <a [routerLink]="['/claims']">
             <span class='glyphicon glyphicon-user'></span> User claims
         </a>
     </li>
@@ -250,8 +249,8 @@ in the [IdentityServer4](http://identityserver.io/) [documentation](http://docs.
     First add a claims action to the Account controller
 
     ```csharp
-    // GET: /claims
-    [HttpGet("/[action]")]
+    // GET: /account/claims
+    [HttpGet("account/[action]")]
     public IActionResult Claims()
     {
         var claims = from c in User.Claims select new { c.Type, c.Value };
@@ -277,10 +276,10 @@ in the [IdentityServer4](http://identityserver.io/) [documentation](http://docs.
         public claims: Claim[];
 
         constructor(http: Http) {
-            http.get('/username').subscribe(result => {
+            http.get('/account/username').subscribe(result => {
                 this.username = result.json();
             });
-            http.get('/claims').subscribe(result => {
+            http.get('/account/claims').subscribe(result => {
                 this.claims = result.json();
             });
         }
@@ -364,8 +363,8 @@ in the [IdentityServer4](http://identityserver.io/) [documentation](http://docs.
 9. Add a Logout action to the Account controller
 
     ```csharp
-    // GET: /logout
-    [Route("/[action]")]
+    // GET: /account/logout
+    [Route("account/[action]")]
     public async Task<IActionResult> Logout()
     {
         if (User.Identity.IsAuthenticated)

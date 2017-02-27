@@ -15,11 +15,11 @@ namespace QuickstartIdentityServer
         public static IEnumerable<IdentityResource> GetIdentityResources()
         {
             // TODO: Add identity resources
-            // return new List<IdentityResource>
-            // {
-            //     new IdentityResources.OpenId(),
-            //     new IdentityResources.Profile(),
-            // };
+            return new List<IdentityResource>
+             {
+                 //new IdentityResources.OpenId(),
+                 //new IdentityResources.Profile(),
+             };
         }
 
         public static IEnumerable<ApiResource> GetApiResources()
